@@ -77,13 +77,15 @@ As ferramentas utilizadas para desenvolver o projeto:
     
 <h2 id="run-project">🖥 Como rodar o projeto </h2>
 
+
 <p>Clone o repositório com o seguinte comando:</p>
 
 ```bash
 # - Clone this repository:
 $ git clone https://github.com/JoseMatheus29/OrbisApi.git
 ```
-### Backend
+ 
+ <p>Mude o nome do arquivo "env.example" para "env" e solicite as configurações para o administrador.<p/>
  
 ```bash
 # - Entre nesse diretório:
