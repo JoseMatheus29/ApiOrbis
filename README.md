@@ -1,67 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align = "center">Orbis</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<h1>Topics 📋</h1>
+
+   - [Sobre 📖](#about)
+   - [Equipe](#team)
+   - [Tecnologias 🚀](#techs)
+   - [Tools 🛠️](#tools)
+   - [Como rodar o projeto 🤔](#run-project)
+
+
+<h2 id="about">😀 Sobre o projeto </h2>
+<p id = "Sobre">Este repositorio contêm a aplicação "Orbis - Um toolkit digital de design centrado no usuário". A aplicação surge da necessidade de auxiliar os alunos da disciplina de IHC a projetar produtos  interativos, com uma curadoria de conteúdos que serão apresentados de forma digital sobre os métodos do design de interação. Os conteúdos serão baseados no artigo  "Orbis: Um toolkit para Apoio no Ensino e Prática de Técnicas do Design Centrado no Usuário - Valeska Mesquita e Ticianne Darin" adaptando a proposta de cartas das autoras do artigo para uma website interativo.</p>
+
+<h2 id="team">Equipe </h2>
+<p>
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Função</th>
+    </tr>
+    <tr>
+      <td>Alairton Junior</td>
+      <td>Líder</td>
+    </tr>
+    <tr>
+      <td>Beatriz Carvalho</td>
+      <td>Arquiteta da informação</td>
+    </tr>
+    <tr>
+      <td>Mariana Rangel</td>
+      <td>Designer</td>
+    </tr>
+    <tr>
+      <td>Isabelle Reinbold</td>
+      <td>Desenvolvedora Frontend</td>
+    </tr>
+     <tr>
+      <td>Jamyle Layla</td>
+      <td>Desenvolvedora Frontend</td>
+    </tr>
+    <tr>
+      <td>José Matheus</td>
+      <td>Desenvolvedor Backend</td>
+    </tr>
+
+  </table>
 </p>
 
-## About Laravel
+<h2 id="techs">🚀 Tecnologias</h2>
+<p>Tecnologias do Front-end</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-  [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+-  [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+-  [Axios](https://axios-http.com/)
+-  [Styled-Compoments](https://styled-components.com/docs)
+-  [React](https://react.dev/)
+-  [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p>Tecnologias do Back-end</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+-  [Composer](https://getcomposer.org/download/)
+-  [PHP](https://www.php.net/downloads.php)
+-  [PhpMyadmin] (incluso com xamp)
+-  [Laravel](https://laravel.com/)
+-  [Xamp](https://www.apachefriends.org/pt_br/index.html)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+  
+ <h2 id="tools">🛠 Tools </h2>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+As ferramentas utilizadas para desenvolver o projeto:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-  [Visual Studio Code](https://code.visualstudio.com/)
+-  [Figma](https://www.figma.com/ui-design-tool/)
+-  [Vite](https://vitejs.dev/)
+    
+<h2 id="run-project">🖥 Como rodar o projeto </h2>
 
-## Laravel Sponsors
+<p>Clone o repositório com o seguinte comando:</p>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+# - Clone this repository:
+$ git clone https://github.com/JoseMatheus29/OrbisApi.git
+```
+### Backend
+ 
+```bash
+# - Entre nesse diretório:
+$ cd orbis
+$ code .
 
-### Premium Partners
+# - For install dependencies:
+$ composer install
+# and
+$ composer update
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# ApiOrbis" 
+# - Inicializar o server do projeto:
+$ php artisan serve
+```
