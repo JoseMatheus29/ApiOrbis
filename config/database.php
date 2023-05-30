@@ -12,10 +12,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', '127.0.0.1:3306'),
-            'database'  => env('DB_DATABASE', 'orbisbd'),
-            'username'  => env('DB_USERNAME', 'root'),
-            'password'  => env('DB_PASSWORD', 'root'),
+            'host'      => env('DB_HOST', 'sql313.epizy.com'),
+            'database'  => env('DB_DATABASE', 'epiz_34263002_orbisBd'),
+            'username'  => env('DB_USERNAME', 'epiz_34263002'),
+            'password'  => env('DB_PASSWORD', 'AJAmJpJFTXi4n'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

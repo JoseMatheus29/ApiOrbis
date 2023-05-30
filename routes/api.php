@@ -11,10 +11,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::namespace('Api') -> group(function(){
-
+    //Rotas Stage
     Route::post('/addStage',[StageController::class, 'add']);
     Route::get('/list', [StageController::class, 'listAll']);
     Route::get('/list/{id}', [StageController::class, 'listOne']);
     Route::put('/update/{id}', [StageController::class, 'update']);
     Route::delete('/delete/{id}', [StageController::class, 'delete']);
+
 });

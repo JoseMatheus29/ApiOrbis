@@ -12,7 +12,6 @@ class StageController extends Controller
         try{
             $stage = new Stage();
 
-
             $stage->id = $request->nome;
             $stage->name_pt = $request->name_pt;
             $stage->name_en = $request->name_en;
@@ -77,6 +76,7 @@ class StageController extends Controller
         try{
 
             $stage = Stage::find($id);
+            
             $stage->delete();
 
             return ['status' => 'ok'];
