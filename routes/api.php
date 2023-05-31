@@ -4,6 +4,7 @@ $namespace = 'App\Http\Controllers\Api';
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Api\StageController;
+use App\Http\Controllers\Api\StepByStepControll;
 use App\Http\Controllers\Api\ToolsController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -24,5 +25,12 @@ Route::namespace('Api') -> group(function(){
     Route::get('/listTools/{id}', [ToolsController::class, 'listOne']);
     Route::put('/updateTool/{id}', [ToolsController::class,'update']);
     Route::delete('/deleteTool/{id}',[ToolsController::class, 'delete']);
+
+    //Route Step_Step
+    Route::post('/addStep',[StepByStepControll::class,'add']);
+    Route::get('/listStep', [StepByStepControll::class, 'listAll']);
+    Route::get('/listStep/{id}', [StepByStepControll::class, 'listOne']);
+    Route::put('/updateStep/{id}', [StepByStepControll::class,'update']);
+    Route::delete('/deleteStep/{id}',[StepByStepControll::class, 'delete']);
 
 });
