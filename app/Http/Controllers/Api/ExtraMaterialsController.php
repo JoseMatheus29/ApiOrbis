@@ -3,24 +3,22 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Step_by_Step;
+use App\Models\extra_materials;
 use Illuminate\Http\Request;
 
-class StepByStepControll extends Controller
+class ExtraMaterialsController extends Controller
 {
     public function add(Request $request){
         try{
-            $step = new Step_by_Step();
+            $extraMaterials = new extra_materials();
 
-            $step->id = $request->id;
-            $step->title = $request->title;
-            $step->description = $request->description;
-            $step->alert = $request->alert;
-            $step->origin = $request->origin;
-            $step->Tool_idTool  = $request -> Tool_idTool ;
+            $extraMaterials->id = $request->id;
+            $extraMaterials->name = $request->name;
+            $extraMaterials->body = $request->body;
+            $extraMaterials->Tool_idTool  = $request -> Tool_idTool ;
 
 
-            $step->save();
+            $extraMaterials->save();
 
             return ['status' => 'ok'];
 
@@ -33,8 +31,8 @@ class StepByStepControll extends Controller
     public function listAll(){
         try{
 
-            $steps = Step_by_Step::all();
-            return $steps;
+            $extraMaterials = new extra_materials();
+            return $extraMaterials;
 
         }catch(\Exception $erro){
             
@@ -45,8 +43,8 @@ class StepByStepControll extends Controller
     public function listOne($id){
         try{
 
-            $step = Step_by_Step::find($id);
-            return $step;
+            $extraMaterials = new extra_materials();
+            return $extraMaterials;
 
         }catch(\Exception $erro){
             
@@ -57,16 +55,14 @@ class StepByStepControll extends Controller
     public function update(Request $request, $id){
         try{
 
-            $step = Step_by_Step::find($id);
+            $extraMaterials = new extra_materials();
 
-            $step->id = $request->id;
-            $step->title = $request->title;
-            $step->description = $request->description;
-            $step->alert = $request->alert;
-            $step->origin = $request->origin;
-            $step->Tool_idTool  = $request -> Tool_idTool ;
+            $extraMaterials->id = $request->id;
+            $extraMaterials->name = $request->name;
+            $extraMaterials->body = $request->body;
+            $extraMaterials->Tool_idTool  = $request -> Tool_idTool ;
 
-            $step -> save();
+            $extraMaterials -> save();
 
             return ['retorno' => 'ok', 'data' => $request->all()];
 
@@ -79,9 +75,9 @@ class StepByStepControll extends Controller
     public function delete($id){
         try{
 
-            $step = Step_by_Step::find($id);
+            $extraMaterials = new extra_materials();
             
-            $step->delete();
+            $extraMaterials->delete();
 
             return ['status' => 'ok'];
 

@@ -1,6 +1,7 @@
 <?php
 $namespace = 'App\Http\Controllers\Api';
 
+use App\Http\Controllers\Api\ExtraMaterialsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Api\StageController;
@@ -32,5 +33,12 @@ Route::namespace('Api') -> group(function(){
     Route::get('/listStep/{id}', [StepByStepControll::class, 'listOne']);
     Route::put('/updateStep/{id}', [StepByStepControll::class,'update']);
     Route::delete('/deleteStep/{id}',[StepByStepControll::class, 'delete']);
+
+    //Route Extra_Materials
+    Route::post('/addExtraMaterials',[ ExtraMaterialsController::class,'add']);
+    Route::get('/listExtraMaterials', [ExtraMaterialsController::class, 'listAll']);
+    Route::get('/listExtraMaterials/{id}', [ExtraMaterialsController::class, 'listOne']);
+    Route::put('/updateExtraMaterials/{id}', [ExtraMaterialsController::class,'update']);
+    Route::delete('/deleteExtraMaterials/{id}',[ExtraMaterialsController::class, 'delete']);
 
 });
