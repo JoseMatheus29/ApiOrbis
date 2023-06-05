@@ -14,31 +14,31 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::namespace('Api') -> group(function(){
     //Rotas Stage
-    Route::post('/addStage',[StageController::class, 'add']);
-    Route::get('/listStage', [StageController::class, 'listAll']);
-    Route::get('/listStage/{id}', [StageController::class, 'listOne']);
-    Route::put('/updateStage/{id}', [StageController::class, 'update']);
-    Route::delete('/deleteStage/{id}', [StageController::class, 'delete']);
+    Route::post('Stage/add',[StageController::class, 'add']);
+    Route::get('Stage/list', [StageController::class, 'listAll']);
+    Route::get('Stage/list/{id}', [StageController::class, 'listOne']);
+    Route::put('Stage/update/{id}', [StageController::class, 'update']);
+    Route::delete('Stage/delete/{id}', [StageController::class, 'delete']);
 
     //Rotas Tools
-    Route::post('/addTools',[ToolsController::class,'add']);
-    Route::get('/listTools', [ToolsController::class, 'listAll']);
-    Route::get('/listTools/{id}', [ToolsController::class, 'listOne']);
-    Route::put('/updateTool/{id}', [ToolsController::class,'update']);
-    Route::delete('/deleteTool/{id}',[ToolsController::class, 'delete']);
+    Route::post('Tools/add',[ToolsController::class,'add']);
+    Route::get('Tools/list', [ToolsController::class, 'listAll']);
+    Route::get('Tools/list/{id}', [ToolsController::class, 'listOne']);
+    Route::put('Tools/update/{id}', [ToolsController::class,'update']);
+    Route::delete('Tools/delete/{id}',[ToolsController::class, 'delete']);
 
     //Route Step_Step
-    Route::post('/addStep',[StepByStepControll::class,'add']);
-    Route::get('/listStep', [StepByStepControll::class, 'listAll']);
-    Route::get('/listStep/{id}', [StepByStepControll::class, 'listOne']);
-    Route::put('/updateStep/{id}', [StepByStepControll::class,'update']);
-    Route::delete('/deleteStep/{id}',[StepByStepControll::class, 'delete']);
+    Route::post('Step/add',[StepByStepControll::class,'add']);
+    Route::get('Step/list', [StepByStepControll::class, 'listAll']);
+    Route::get('Step/list/{id}', [StepByStepControll::class, 'listOne']);
+    Route::put('Step/update/{id}', [StepByStepControll::class,'update']);
+    Route::delete('Step/delete/{id}',[StepByStepControll::class, 'delete']);
 
     //Route Extra_Materials
-    Route::post('/addExtraMaterials',[ ExtraMaterialsController::class,'add']);
-    Route::get('/listExtraMaterials', [ExtraMaterialsController::class, 'listAll']);
-    Route::get('/listExtraMaterials/{id}', [ExtraMaterialsController::class, 'listOne']);
-    Route::put('/updateExtraMaterials/{id}', [ExtraMaterialsController::class,'update']);
-    Route::delete('/deleteExtraMaterials/{id}',[ExtraMaterialsController::class, 'delete']);
+    Route::post('ExtraMaterials/add',[ ExtraMaterialsController::class,'add']);
+    Route::get('ExtraMaterials/list', [ExtraMaterialsController::class, 'listAll']);
+    Route::get('ExtraMaterials/list/{id}', [ExtraMaterialsController::class, 'listOne']);
+    Route::put('ExtraMaterials/update/{id}', [ExtraMaterialsController::class,'update']);
+    Route::delete('ExtraMaterials/delete/{id}',[ExtraMaterialsController::class, 'delete']);
 
 });
