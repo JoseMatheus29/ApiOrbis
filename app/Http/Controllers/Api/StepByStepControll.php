@@ -41,10 +41,11 @@ class StepByStepControll extends Controller
 
         }
     }
-    public function listOne($id){
+    public function listOne($Tools_idTools){
         try{
 
-            $step = Step_by_Step::find($id);
+            $step = Step_by_Step::where ('Tools_idTools', '=', $Tools_idTools)->get();;
+            
             return $step;
 
         }catch(\Exception $erro){
@@ -62,7 +63,7 @@ class StepByStepControll extends Controller
             $step->title = $request->title;
             $step->description = $request->description;
             $step->alert = $request->alert;
-            $step->Tool_idTool  = $request -> Tool_idTool ;
+            $step->Tools_idTools  = $request -> Tools_idTools ;
 
             $step -> save();
 
