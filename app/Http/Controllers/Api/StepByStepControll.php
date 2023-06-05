@@ -16,7 +16,7 @@ class StepByStepControll extends Controller
             $step->title = $request->title;
             $step->description = $request->description;
             $step->alert = $request->alert;
-            $step->Tool_idTool  = $request -> Tool_idTool ;
+            $step->Tools_idTools  = $request -> Tools_idTools ;
 
 
             $step->save();
@@ -62,7 +62,6 @@ class StepByStepControll extends Controller
             $step->title = $request->title;
             $step->description = $request->description;
             $step->alert = $request->alert;
-            $step->origin = $request->origin;
             $step->Tool_idTool  = $request -> Tool_idTool ;
 
             $step -> save();
