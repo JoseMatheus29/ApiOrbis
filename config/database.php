@@ -12,10 +12,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'sql313.epizy.com:3306'),
-            'database'  => env('DB_DATABASE', 'epiz_34263002_orbisBd'),
-            'username'  => env('DB_USERNAME', 'epiz_34263002'),
-            'password'  => env('DB_PASSWORD', 'AJAmJpJFTXi4n'),
+            'host'      => env('DB_HOST', 'containers-us-west-166.railway.app:6542'),
+            'database'  => env('DB_DATABASE', 'railway'),
+            'username'  => env('DB_USERNAME', 'root'),
+            'password'  => env('DB_PASSWORD', 'aAkn1UBK4pwbIUycSqOd'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
