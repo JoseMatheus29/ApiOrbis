@@ -40,6 +40,18 @@ class ExtraMaterialsController extends Controller
 
         }
     }
+    public function listAespecifc($id, $tipo){
+        try{
+
+            $extraMaterials = extra_materials::find($id);
+            return $extraMaterials[$tipo];
+
+        }catch(\Exception $erro){
+            
+            return ['status' => 'erro', 'details' => $erro];
+
+        }
+    }
     public function listOne($id){
         try{
 

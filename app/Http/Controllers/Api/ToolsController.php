@@ -61,6 +61,18 @@ class ToolsController extends Controller
 
         }
     }
+    public function listAespecifc($id, $tipo){
+        try{
+
+            $tool = Tool::find($id);
+            return $tool[$tipo];
+
+        }catch(\Exception $erro){
+            
+            return ['status' => 'erro', 'details' => $erro];
+
+        }
+    }
     public function update(Request $request, $id){
         try{
 

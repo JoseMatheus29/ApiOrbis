@@ -52,6 +52,18 @@ class StageController extends Controller
 
         }
     }
+    public function listAespecifc($id, $tipo){
+        try{
+
+            $stages = Stage::find($id);
+            return $stages[$tipo];
+
+        }catch(\Exception $erro){
+            
+            return ['status' => 'erro', 'details' => $erro];
+
+        }
+    }
     public function update(Request $request, $id){
         try{
 

@@ -54,6 +54,18 @@ class StepByStepControll extends Controller
 
         }
     }
+    public function listAespecifc($id, $tipo){
+        try{
+
+            $step = Step_by_Step::find($id);
+            return $step[$tipo];
+
+        }catch(\Exception $erro){
+            
+            return ['status' => 'erro', 'details' => $erro];
+
+        }
+    }
     public function update(Request $request, $id){
         try{
 
