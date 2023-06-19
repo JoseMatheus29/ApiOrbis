@@ -18,7 +18,7 @@ class ToolsController extends TestCase
         $response
             ->assertStatus(201)
             ->assertJson([
-                'created' => true,
+                'created' => true, 
             ]);
     }
 }

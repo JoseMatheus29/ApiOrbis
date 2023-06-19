@@ -35,9 +35,21 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }
-    }
-    public function listAll(){
+        }}
+    public function listAll(){ 
+        /**
+         * @OA\Get(
+         *      tags={"/listAll},
+         *      description = "Lista todas as Ferramentas",
+         *      path = "/lisAll",
+         *      security={{"bearerAuth":{}}},
+         *      @OA\Response(
+         *      response="200", description="List of task
+         *   )
+         * )
+         * 
+         * @return Tools
+         */
         try{
 
             $tools = Tool::all();
@@ -47,8 +59,7 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }
-    }
+        }}
     public function listOne($id){
         try{
 
@@ -59,8 +70,7 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }
-    }
+        }}
     public function listAespecifc($id, $tipo){
         try{
 
@@ -71,8 +81,7 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }
-    }
+        }}
     public function update(Request $request, $id){
         try{
 
@@ -100,8 +109,7 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }
-    }
+        } }
     public function delete($id){
         try{
 
@@ -115,6 +123,5 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }
-    }
+        }}
 }
