@@ -71,13 +71,15 @@ class StepByStepControll extends Controller
 
             $step = Step_by_Step::find($id);
 
-            $step->id = $request->id;
+            
             $step->title = $request->title;
             $step->description = $request->description;
             $step->alert = $request->alert;
-            $step->Tools_idTools  = $request -> Tools_idTools ;
+            
 
             $step -> save();
+
+            echo($step);
 
             return ['retorno' => 'ok', 'data' => $request->all()];
 

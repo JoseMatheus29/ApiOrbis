@@ -31,7 +31,7 @@ class ExtraMaterialsController extends Controller
     public function listAll(){
         try{
 
-            $extraMaterials = new extra_materials();
+            $extraMaterials = extra_materials::all();
             return $extraMaterials;
 
         }catch(\Exception $erro){
@@ -55,7 +55,7 @@ class ExtraMaterialsController extends Controller
     public function listOne($id){
         try{
 
-            $extraMaterials = new extra_materials();
+            $extraMaterials = extra_materials::find($id);
             return $extraMaterials;
 
         }catch(\Exception $erro){

@@ -16,6 +16,7 @@ class ToolsController extends Controller
             $tool->name_pt = $request->name_pt;
             $tool->name_en = $request->name_en;
             $tool->effort = $request->effort;
+            $tool->time = $request->time;
             $tool->origin = $request->origin;
             $tool->type_of_data = $request->type_of_data;
             $tool->users = $request -> users;
@@ -25,6 +26,7 @@ class ToolsController extends Controller
             $tool -> tip = $request -> tip;
             $tool -> templateName = $request -> templateName;
             $tool -> Stage_idStage = $request -> Stage_idStage;
+            
 
 
             $tool->save();
@@ -35,21 +37,9 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }}
-    public function listAll(){ 
-        /**
-         * @OA\Get(
-         *      tags={"/listAll},
-         *      description = "Lista todas as Ferramentas",
-         *      path = "/lisAll",
-         *      security={{"bearerAuth":{}}},
-         *      @OA\Response(
-         *      response="200", description="List of task
-         *   )
-         * )
-         * 
-         * @return Tools
-         */
+        }
+    }
+    public function listAll(){
         try{
 
             $tools = Tool::all();
@@ -59,7 +49,8 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }}
+        }
+    }
     public function listOne($id){
         try{
 
@@ -70,7 +61,8 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }}
+        }
+    }
     public function listAespecifc($id, $tipo){
         try{
 
@@ -81,16 +73,17 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }}
+        }
+    }
     public function update(Request $request, $id){
         try{
 
             $tool = Tool::find($id);
-
-            $tool->id = $request->nome;
+            
             $tool->name_pt = $request->name_pt;
             $tool->name_en = $request->name_en;
             $tool->effort = $request->effort;
+            $tool->time = $request->time;
             $tool->origin = $request->origin;
             $tool->type_of_data = $request->type_of_data;
             $tool->users = $request -> users;
@@ -99,7 +92,6 @@ class ToolsController extends Controller
             $tool -> icon = $request -> icon;
             $tool -> tip = $request -> tip;
             $tool -> templateName = $request -> templateName;
-            $tool -> Stage_idStage = $request -> Stage_idStage;
 
             $tool -> save();
 
@@ -109,7 +101,8 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        } }
+        }
+    }
     public function delete($id){
         try{
 
@@ -123,5 +116,6 @@ class ToolsController extends Controller
             
             return ['status' => 'erro', 'details' => $erro];
 
-        }}
+        }
+    }
 }

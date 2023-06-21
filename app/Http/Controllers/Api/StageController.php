@@ -69,7 +69,6 @@ class StageController extends Controller
 
             $stage = Stage::find($id);
 
-            $stage->id = $request->nome;
             $stage->name_pt = $request->name_pt;
             $stage->name_en = $request->name_en;
             $stage->description = $request->description;
