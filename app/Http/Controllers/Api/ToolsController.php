@@ -39,7 +39,22 @@ class ToolsController extends Controller
 
         }
     }
-    public function listAll(){
+    /**
+     *      @OA\Get(
+     *      path="/Tools/list",
+     *      operationId="listAllTool",
+     *      tags={"Tool"},
+     *      summary="Get list of Tool",
+     *      description="Returns list of Tool",
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       )
+     *     )
+     *
+     * Returns list of Tool
+     */
+    public function listAllTool(){
         try{
 
             $tools = Tool::all();
@@ -51,7 +66,30 @@ class ToolsController extends Controller
 
         }
     }
-    public function listOne($id){
+    /**
+     * @OA\Get(
+     *      path="/Tools/list/{id}",
+     *      operationId="listOneTool",
+     *      tags={"Tool"},
+     *      description="Return a Tool",
+     *      @OA\Parameter(
+     *          name="id",
+     *          description="Tool id",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *      @OA\Response(response=400, description="Bad request"),
+     *      @OA\Response(response=404, description="Resource Not Found"),
+     * )
+     */
+    public function listOneTool($id){
         try{
 
             $tool = Tool::find($id);

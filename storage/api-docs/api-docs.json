@@ -1,15 +1,248 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Laravel Road",
-        "version": "0.0.1"
+        "title": "Api Orbis",
+        "version": "1.0.0"
     },
     "servers": [
         {
-            "url": "http://localhost/api"
+            "url": "http:/api",
+            "description": "SwaggerHUB API Mocking"
         }
     ],
     "paths": {
-        "/lisAll": {}
+        "/ExtraMaterials/list": {
+            "get": {
+                "tags": [
+                    "ExtraMaterials"
+                ],
+                "summary": "Get list of ExtraMaterials",
+                "description": "Returns list of ExtraMaterials",
+                "operationId": "listAllExtraMaterials",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/ExtraMaterials/list/{id}": {
+            "get": {
+                "tags": [
+                    "ExtraMaterials"
+                ],
+                "description": "Return a ExtraMaterials",
+                "operationId": "listOneExtra",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ExtraMaterials id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/Stage/add": {
+            "post": {
+                "tags": [
+                    "Stages"
+                ],
+                "summary": "Add a stage",
+                "operationId": "add",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Stage id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "name_pt",
+                        "in": "path",
+                        "description": "Name of Stage",
+                        "schema": {
+                            "type": "varchar"
+                        }
+                    },
+                    {
+                        "name": "name_en",
+                        "in": "path",
+                        "description": "Name of Stage in English",
+                        "schema": {
+                            "type": "varchar"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "in": "path",
+                        "description": "Description of Stage",
+                        "schema": {
+                            "type": "varchar"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/Stage/list": {
+            "get": {
+                "tags": [
+                    "Stages"
+                ],
+                "summary": "Get list of Stage",
+                "description": "Returns list of Stages",
+                "operationId": "listAllStage",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/Stage/list/{id}": {
+            "get": {
+                "tags": [
+                    "Stages"
+                ],
+                "description": "Return a Stage",
+                "operationId": "listOneStage",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Stage id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/Step/list": {
+            "get": {
+                "tags": [
+                    "Step"
+                ],
+                "summary": "Get list of Step",
+                "description": "Returns list of Step",
+                "operationId": "listAllStep",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/Step/list/{id}": {
+            "get": {
+                "tags": [
+                    "Step"
+                ],
+                "description": "Return a Step",
+                "operationId": "listOneStep",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Step id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/Tools/list": {
+            "get": {
+                "tags": [
+                    "Tool"
+                ],
+                "summary": "Get list of Tool",
+                "description": "Returns list of Tool",
+                "operationId": "listAllTool",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/Tools/list/{id}": {
+            "get": {
+                "tags": [
+                    "Tool"
+                ],
+                "description": "Return a Tool",
+                "operationId": "listOneTool",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Tool id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        }
     }
 }

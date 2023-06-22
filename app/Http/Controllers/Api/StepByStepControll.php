@@ -29,7 +29,22 @@ class StepByStepControll extends Controller
 
         }
     }
-    public function listAll(){
+    /**
+     *      @OA\Get(
+     *      path="/Step/list",
+     *      operationId="listAllStep",
+     *      tags={"Step"},
+     *      summary="Get list of Step",
+     *      description="Returns list of Step",
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       )
+     *     )
+     *
+     * Returns list of Step
+     */
+    public function listAllStep(){
         try{
 
             $steps = Step_by_Step::all();
@@ -41,7 +56,30 @@ class StepByStepControll extends Controller
 
         }
     }
-    public function listOne($Tools_idTools){
+    /**
+     * @OA\Get(
+     *      path="/Step/list/{id}",
+     *      operationId="listOneStep",
+     *      tags={"Step"},
+     *      description="Return a Step",
+     *      @OA\Parameter(
+     *          name="id",
+     *          description="Step id",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *      @OA\Response(response=400, description="Bad request"),
+     *      @OA\Response(response=404, description="Resource Not Found"),
+     * )
+     */
+    public function listOneStep($Tools_idTools){
         try{
 
             $step = Step_by_Step::where ('Tools_idTools', '=', $Tools_idTools)->get();;

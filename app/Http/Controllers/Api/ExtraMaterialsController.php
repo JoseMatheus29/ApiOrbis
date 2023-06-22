@@ -28,7 +28,22 @@ class ExtraMaterialsController extends Controller
 
         }
     }
-    public function listAll(){
+    /**
+     *      @OA\Get(
+     *      path="/ExtraMaterials/list",
+     *      operationId="listAllExtraMaterials",
+     *      tags={"ExtraMaterials"},
+     *      summary="Get list of ExtraMaterials",
+     *      description="Returns list of ExtraMaterials",
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       )
+     *     )
+     *
+     * Returns list of ExtraMaterials
+     */
+    public function listAllExtraMaterials(){
         try{
 
             $extraMaterials = extra_materials::all();
@@ -52,7 +67,30 @@ class ExtraMaterialsController extends Controller
 
         }
     }
-    public function listOne($id){
+    /**
+     * @OA\Get(
+     *      path="/ExtraMaterials/list/{id}",
+     *      operationId="listOneExtra",
+     *      tags={"ExtraMaterials"},
+     *      description="Return a ExtraMaterials",
+     *      @OA\Parameter(
+     *          name="id",
+     *          description="ExtraMaterials id",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *      @OA\Response(response=400, description="Bad request"),
+     *      @OA\Response(response=404, description="Resource Not Found"),
+     * )
+     */
+    public function listOneExtra($id){
         try{
 
             $extraMaterials = extra_materials::find($id);
