@@ -2,12 +2,11 @@
 $namespace = 'App\Http\Controllers\Api';
 
 use App\Http\Controllers\Api\ExtraMaterialsController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Api\StageController;
 use App\Http\Controllers\Api\StepByStepControll;
 use App\Http\Controllers\Api\ToolsController;
-
+use App\Http\Controllers\Api\RecommendationController;
 
 Route::namespace('Api') -> group(function(){
     //Rotas Stage
@@ -41,5 +40,9 @@ Route::namespace('Api') -> group(function(){
     Route::get('ExtraMaterials/list/{id}/{tipo}', [ExtraMaterialsController::class, 'listAespecifc']);
     Route::post('ExtraMaterials/update/{id}', [ExtraMaterialsController::class,'update']);
     Route::delete('ExtraMaterials/delete/{id}',[ExtraMaterialsController::class, 'delete']);
+
+
+    Route::post('/recommendation', [RecommendationController::class, 'getRecommendation']);
+
 
 });

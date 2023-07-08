@@ -6,7 +6,7 @@
     },
     "servers": [
         {
-            "url": "http:/api",
+            "url": "https://alairtonjunior.com/api",
             "description": "SwaggerHUB API Mocking"
         }
     ],

@@ -14,7 +14,7 @@ use Illuminate\Routing\Controller as BaseController;
  * )
  * * @OA\Server(
  *     description="SwaggerHUB API Mocking",
- *     url="http:/api")
+ *     url="https://alairtonjunior.com/api")
  * 
  */
 
