@@ -37,7 +37,7 @@ class RecommendationController extends Controller
                 usort($recIdeal, function ($a, $b) {
                     return $b['score'] - $a['score'];
                 });
-                $recommendedIdeal = $recIdeal[0]['tool']->id;
+                $recommendedIdeal = $recIdeal[0]['tool'];
             } else {
                 $recommendedIdeal = "Nenhuma recomendação ideal encontrada.";
             }
@@ -46,7 +46,7 @@ class RecommendationController extends Controller
                 usort($recParecida, function ($a, $b) {
                     return $b['score'] - $a['score'];
                 });
-                $recommendedSimilar = $recParecida[0]['tool']->id;
+                $recommendedSimilar = $recParecida[0]['tool'];
             } else {
                 $recommendedSimilar = "Nenhuma recomendação parecida encontrada.";
             }
@@ -55,7 +55,7 @@ class RecommendationController extends Controller
                 usort($recNaoFunciona, function ($a, $b) {
                     return $b['score'] - $a['score'];
                 });
-                $recommendedNotWorking = $recNaoFunciona[0]['tool']->id;
+                $recommendedNotWorking = $recNaoFunciona[0]['tool'];
             } else {
                 $recommendedNotWorking = "Nenhuma recomendação que não funciona encontrada.";
             }
